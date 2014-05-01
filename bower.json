@@ -1,0 +1,9 @@
+{
+  "name": "belly_split",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "1.2.9",
+    "jquery": "1.9",
+    "angular-ui-router": "0.2.7"
+  }
+}

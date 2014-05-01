@@ -1,0 +1,45 @@
+.tests
+  @extend .grid-col
+  @extend .grid-9-10
+  margin: 20px auto auto auto
+  display: block
+  color: $slate
+
+h2
+  @extend .grid-col
+  @extend .grid-5-12
+  margin: 0
+
+.total-hits, .completed-goal
+  @extend .grid-col
+  @extend .grid-2-12
+  text-align: center
+  position: relative
+  top: .5em
+
+ul
+  list-style-type: none
+
+li
+  border-bottom: 1px solid $slate-offset
+  padding-bottom: 5px
+
+.variant
+  border-bottom: 1px solid $gray-light
+  @extend .grid
+  padding-left: 15px
+
+  .total-hits, .completed-goal
+    top: 1em
+
+
+h3
+  @extend .h-delta
+  @extend .grid-col
+  @extend .grid-5-12
+  margin: 10px 0
+
+em
+  font-size: 11px
+  font-style: italic
+  color: $slate-offset

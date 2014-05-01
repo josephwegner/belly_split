@@ -1,0 +1,19 @@
+<header>
+  <h1>Belly Split Testing Dashboard</h1>
+</header>
+<div class="tests">
+  <div ng-repeat="(test_name, test) in tests" class="test">
+    <ul>
+      <li>
+        <h2>{{test_name}} <em>{{test.start_time | date : 'shortDate'}} - {{test.end_time | date: 'shortDate'}}</em></h2>
+        <span class="total-hits">Total Hits <em>{{test.total_visits}}</em></span>
+        <span class="completed-goal">Completed Goal <em>{{test.completed_goals}}</em></span>
+      </li>
+      <li class="variant" ng-repeat="(variation_name, variation) in test.variations | toArray | orderBy:'completed_goal':true ">
+        <h3>{{variation_name}}</h3>
+        <span class="total-hits">{{variation.total_hits}}</span>
+        <span class="completed-goal">{{variation.completed_goal}} <em>{{(variation.completed_goal / variation.total_hits) * 100 | number : 2}}%</em></span>
+      </li>
+    </ul>
+  </div>
+</div>
